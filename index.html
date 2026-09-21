@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!--
+    ============================================================================
+    index.html - Hub de Inicio del Material Educativo Digital (MED)
+    ============================================================================
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taller MED - Inicio</title>
+  <meta name="description" content="Taller de Diseño Tecnopedagógico de Materiales Educativos Digitales Accesibles">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <meta property="og:image" content="https://bolt.new/static/og_default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+<body>
+
+  <main class="contenedor-hub">
+    <!-- Hero Banner destacado con métricas del taller -->
+    <section class="hero-banner">
+      <h1>Taller de Diseño Tecnopedagógico</h1>
+      <p>Materiales Educativos Digitales (MED) Accesibles en 16:9. Transformá el archipiélago de recursos en una experiencia unificada de aprendizaje.</p>
+      <div class="hero-metricas">
+        <div class="hero-metrica">
+          <span class="hero-metrica-numero">18</span>
+          <span class="hero-metrica-label">Pantallas</span>
+        </div>
+        <div class="hero-metrica">
+          <span class="hero-metrica-numero">6</span>
+          <span class="hero-metrica-label">Módulos</span>
+        </div>
+        <div class="hero-metrica">
+          <span class="hero-metrica-numero">120</span>
+          <span class="hero-metrica-label">Minutos</span>
+        </div>
+        <div class="hero-metrica">
+          <span class="hero-metrica-numero" id="hero-progreso">0%</span>
+          <span class="hero-metrica-label">Tu Avance</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Barra de progreso global del taller -->
+    <section class="progreso-global" id="progreso-global" aria-label="Progreso global del taller">
+      <span class="progreso-global-label">Progreso del Taller</span>
+      <div class="progreso-global-bar">
+        <div class="progreso-global-fill" id="progreso-global-fill" style="width: 0%"></div>
+      </div>
+      <span class="progreso-global-pct" id="progreso-global-pct">0%</span>
+    </section>
+
+    <!-- Fila de acciones: reanudar + reiniciar -->
+    <div class="hub-reanudar" id="hub-reanudar" style="display: none; gap: 16px;">
+      <button class="btn-reanudar" id="btn-reanudar">
+        <svg class="icono" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        Reanudar donde quedé
+      </button>
+      <button class="btn-reiniciar" id="btn-reiniciar-hub">
+        <svg class="icono" viewBox="0 0 24 24"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
+        Reiniciar todo
+      </button>
+    </div>
+
+    <!-- Grilla de tarjetas de módulos -->
+    <section class="hub-grid" id="hub-grid" aria-label="Módulos del taller">
+    </section>
+
+  </main>
+
+  <!-- Modal genérico con botón de cierre X en esquina superior derecha -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+    <div class="modal-contenido">
+      <button class="modal-cerrar-x" id="modal-cerrar-x" aria-label="Cerrar modal">&times;</button>
+      <h3 id="modal-titulo">Título del modal</h3>
+      <div id="modal-cuerpo">
+      </div>
+      <div id="modal-botones"></div>
+    </div>
+  </div>
+
+  <script src="js/datos.js"></script>
+  <script src="js/progreso.js"></script>
+</body>
+</html>
